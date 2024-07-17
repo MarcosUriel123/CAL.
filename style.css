@@ -1,0 +1,118 @@
+body {
+    background: linear-gradient(135deg, #ff4f00, #fc389b, #4caf50);
+    background-image: url('./imagenes/fondo\ web.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./imagenes/fondo\ web.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(290px);
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.container, .sub-container {
+    background: linear-gradient(135deg, rgba(255, 75, 75, 0.9), rgba(255, 200, 75, 0.9)); /* Ajusta los colores del gradiente */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.input {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.input:invalid
+{
+    border-color: crimson;
+    background-color: lightpink;
+}
+
+.input:valid
+{
+    border-color:darkgreen;
+    background-color:lightblue;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
+.graph-button {
+    margin-top: 15px;
+}
+
+.result {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #333;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de clase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <form onsubmit="calcular(event)">
+                <h1 class="title">Operaciones con números enteros</h1>
+                <h3 class="subtitulo">Ingrese la constante</h3>
+                <input class="input" type="text" id="constante" name="constante" placeholder="Constante (Ingrese el exponente (entero))" 
+                pattern="^[a-e0-9]+$" minlength="1" maxlength="5" required>
+                <br><br>
+                <h3 class="subtitulo">Ingrese el exponente</h3>
+                <input class="input" type="text" id="exponente" name="exponente" placeholder="Exponente (Ingrese los dígitos en el rango de la r-z)" 
+                pattern="^[0-9]+$" required>
+                <br><br>
+                <h3 class="subtitulo">Ingrese la variable</h3>
+                <input class="input" type="text" id="variable" name="variable" placeholder="Variable (Ingrese un número)" 
+                pattern="[r-z]*" minlength="1" maxlength="1" required>
+                <br><br>
+                <button type="submit" class="button">Calcular</button>
+                <p id="resultado"></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sub-container">
+            <h1 class="title">Resultado y Gráfica</h1>
+            <h3 class="subtitulo">Resultado</h3>
+            <h3 class="subtitulo" id="resultado_grafica">...</h3>
+            <h3 class="subtitulo">Gráfica generada</h3>
+            <button class="button" onclick="generateGraph()">Generar Gráfica</button>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+    </div>
